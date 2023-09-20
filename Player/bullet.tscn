@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://buwqy3hoto5sm"]
 
 [ext_resource type="Script" path="res://Player/Bullet.gd" id="1_0baxh"]
-[ext_resource type="Texture2D" uid="uid://dikpium214nx7" path="res://Assets/Enemy sprites/spinner_hit.png" id="2_v67ue"]
+[ext_resource type="Texture2D" uid="uid://pdn4t7a7ktx" path="res://Assets/Assets/Assets/Bullet.png" id="2_obosx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yvetx"]
 radius = 12.0
@@ -10,7 +10,7 @@ radius = 12.0
 script = ExtResource("1_0baxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_v67ue")
+texture = ExtResource("2_obosx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yvetx")

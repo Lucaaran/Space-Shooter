@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwffk2ybigdyw"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy.gd" id="1_7vigl"]
+[ext_resource type="Texture2D" uid="uid://x2mt4psaymdl" path="res://Assets/Enemy sprites/spinner.png" id="2_77ufe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gl5pd"]
+radius = 45.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_7vigl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_77ufe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(18.5, -30.8, 18.5, -28.8, 31.5, -15.8, 31.5, 15.8, 31.3, 18, 29.4, 18, 17.3, 31, -19.5, 31, -19.5, 28.5, -22.6, 23, -25.3, 23, -31.5, 16.8, -31.5, -17, -30.4, -17, -17.4, -31, -14.7, -31, 16.3, -31)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gl5pd")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
