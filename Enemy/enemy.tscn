@@ -17,6 +17,7 @@ polygon = PackedVector2Array(18.5, -30.8, 18.5, -28.8, 31.5, -15.8, 31.5, 15.8, 
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
 

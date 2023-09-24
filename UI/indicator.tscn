@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://de1sxtxhrlehj"]
+
+[ext_resource type="Texture2D" uid="uid://fasom2b2fbtf" path="res://Assets/Player/alienGreen.png" id="1_dhvfs"]
+
+[node name="Indicator" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_dhvfs")
